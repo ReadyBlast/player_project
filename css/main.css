@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+p {
+  letter-spacing: 0em;
+}
+
+#background {
+  background-image: url(../img/background.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  height: 100vh;
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  background-color: rgba(0, 0, 0, 10);
+}
+
+.container {
+  max-width: 326px;
+  width: 100%;
+  margin: auto;
+  padding-top: 10vh;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.player-container {
+  max-width: 326px;
+  width: 100%;
+  height: auto;
+  margin: 42px auto;
+
+  background: linear-gradient(
+    180deg,
+    rgba(156, 156, 156, 0.5) 0%,
+    rgba(170, 170, 170, 0.5) 100%,
+    rgba(156, 156, 156, 0.5) 100%
+  );
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 20px;
+}
+
+.album-cover {
+  display: flex;
+  width: 246px;
+  max-block-size: 100%;
+  height: 246px;
+  padding: 40px;
+  padding-bottom: 33px;
+}
+
+#np_track_artwork {
+  width: 246px;
+  height: 246px;
+  display: block; /* Строчно-блочный элемент */
+  overflow: hidden; /* Скрываем всё за контуром */
+  background-size: 100% auto;
+  border-radius: 20px;
+}
+
+.playname {
+  display: flex;
+  margin: 0 40px;
+}
+
+.playpause {
+  max-width: 17.38px;
+  max-height: 22px;
+  width: 100%;
+  height: 100%;
+  float: left;
+  margin-right: 17px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.namesong {
+  display: flex;
+  float: right;
+  margin: auto;
+  flex-direction: column;
+}
+
+.marquee {
+  mask-image: linear-gradient(to right, black 0%, transparent 100%);
+}
+
+.marquee2 {
+  -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, black 90%, transparent 100%);
+}
+
+#np_current_track {
+  font-weight: 600;
+  font-size: 24px;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 28px;
+  max-width: 100%;
+  max-height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#np_current_artist {
+  margin: 0%;
+  font-size: 14px;
+  font-weight: 500;
+  width: 200px;
+  height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.artist:hover {
+  margin: 0%;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.slidecontainer {
+  display: flex;
+  margin: 33px 40px;
+  width: auto;
+  height: auto;
+}
+
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 2px; /* Specified height */
+  background: #ffffff; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 1; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  border-radius: 20px;
+  width: 15px;
+  height: 15px; /* Slider handle height */
+  background: #ffffff; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  border-radius: 20px;
+  width: 13px;
+  height: 13px; /* Slider handle height */
+  background: #ffffff; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.last-song {
+  display: flex;
+  margin: 0 40px;
+  flex-direction: column;
+}
+
+.last-text {
+  width: 246px;
+  height: 14px;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#np_recent_track {
+  width: 246px;
+  height: 19px;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.steam-link:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.vk-link:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.discord-link:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.playerfooter {
+  max-width: 244px;
+  padding: 40px;
+  max-height: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#radiostation-name {
+  max-width: 156px;
+  max-height: 18px;
+  block-size: 100%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center center;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 20px;
+  padding-top: 1px;
+}
+
+#list-icon {
+  background-image: url(../img/list-icon.svg);
+  width: 27.69px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+#chat-icon {
+  background-image: url(../img/chat-icon.svg);
+  width: 27.69px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 0;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Player</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icons" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="background">
+    <section class="container">
+      <div class="player-container">
+        <div class="album-cover">
+          <img
+            id="np_track_artwork"
+            src="https://radio.tkofficial.ru/image/logo.jpg"
+            alt="Album cover"
+          />
+        </div>
+        <div class="playname">
+          <div id="playpause" class="playpause">
+            <input
+              class="play"
+              id="play"
+              type="image"
+              src="img/play.svg"
+              value="Play"
+              onclick="playpause()"
+            />
+          </div>
+          <div class="namesong">
+            <p class="marquee" id="np_current_track">Untitled</p>
+            <p class="marquee" id="np_current_artist">VA</p>
+          </div>
+        </div>
+        <div class="slidecontainer">
+          <input
+            type="range"
+            id="volume"
+            min="0"
+            max="100"
+            value="50"
+            class="slider"
+          />
+        </div>
+        <div class="last-song">
+          <p class="last-text">Предыдущий трек</p>
+          <p class="marquee" id="np_recent_track">VA - Untitled</p>
+        </div>
+        <div class="playerfooter">
+          <button onclick="myFunction()" class="btn" id="list-icon"></button>
+          <p class="rs-name" id="radiostation-name">Everything station 2</p>
+          <button onclick="myFunction()" class="btn" id="chat-icon"></button>
+        </div>
+      </div>
+      <div class="links">
+        <a
+          href="https://steamcommunity.com/groups/TotalenKrieginc"
+          class="steam-link"
+        >
+          <img src="img/cib_steam.svg" alt="steam icon" />
+        </a>
+        <a href="https://vk.com/heathercs" class="vk-link">
+          <img src="img/entypo-social_vk-with-circle.svg" alt="vk icon" />
+        </a>
+        <a href="https://discord.com/invite/txj6Crk" class="discord-link">
+          <img src="img/la_discord.svg" alt="discord icon" />
+        </a>
+      </div>
+    </section>
+    <footer>
+    </footer>
+  </body>
+  <script src="js/script.js"></script>
+  <script src="js/infostation.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.6.0/jquery.marquee.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.6.0/jquery.marquee.js"></script>
+</html>
